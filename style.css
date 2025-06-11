@@ -1,0 +1,238 @@
+:root {
+  --primary-clr: #2656d4;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.marca{
+ font-size: 4rem;
+  font-weight: 500;
+  font-family: girl;
+  color:#2656d4;
+  margin-left: 70px; 
+  text-align: center;
+  margin-top: 10%;
+}
+
+
+.btn-container{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  min-width: 500px;
+  justify-content: space-between;
+}
+
+.btn-modificaciones{
+  position: absolute;
+  right: 0;  /* Mover a la derecha */
+  bottom: 4px; /* Mover al final */
+  text-align: right; /* Alinea el texto a la derecha */
+  transition: transform .3s ease-in-out;
+}
+
+.btn-volver{
+  position: absolute;
+  left: 0;  /* Mover a la derecha */
+  bottom: 4px; /* Mover al final */
+  text-align: left; /* Alinea el texto a la derecha */
+}
+.btn-salir{
+  position: absolute;
+  right: 0;  /* Mover a la derecha */
+  top: 4px; /* Mover al final */
+  text-align: right; /* Alinea el texto a la derecha */
+}
+.btn-volver a{
+  width: 45px;
+  height: 45px;
+  display: flex;
+  border-radius: 70px;
+  color: #ffffff;
+  background-color: #2656d4;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+
+}
+.btn-salir a{
+  width: 45px;
+  height: 45px;
+  display: flex;
+  border-radius: 70px;
+  color: #ffffff;
+  background-color: #2656d4;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+
+}
+/*config*/
+.btn-modificaciones a{
+  width: 45px;
+  height: 45px;
+  display: flex;
+  border-radius: 70px;
+  color: #ffffff;
+  background-color: #2656d4;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+
+}
+.btn-container a {
+  width: 170px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 70px;
+  color: #ffffff;
+  background-color: #2656d4;
+  text-decoration-line: underline;
+  font-size: 20px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  gap: 8px; /* Espacio entre icono y texto */
+  padding: 0 20px; /* Para evitar que el contenido se pegue a los bordes */
+  box-sizing: border-box;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  background-size: 27% 60%;
+  background-repeat: no-repeat;
+  background-position: left;
+  margin-right: 3px;
+  transition: transform 0.3s ease;
+}
+/*config*/
+.icono {
+  width: 18px;
+  height: 18px;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 3px;
+
+}
+
+ .events{
+      background-image: url('imagenes/evento.png');
+    }
+
+    .calendar{
+      background-image: url('imagenes/calendario.png');
+    }
+
+    .cursos{
+      background-image: url('imagenes/cursos.png');
+    }
+
+    .aulas{
+      background-image: url('imagenes/silla.png');
+    }
+
+    .config{
+      background-image: url('imagenes/config.png');
+    }
+
+    .volver{
+      background-image: url('imagenes/volver.png');
+    }
+
+    .salir{
+      background-image: url('imagenes/salir.png');
+    }
+    
+    .minimizar{
+      background-image: url('imagenes/minimizar.png');
+    }
+
+    .recarga{
+      background-image: url('imagenes/recarga.png');
+    }
+.btn-container :hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(145deg, #6dd5ed, #2656d4);
+      font-size: 40px;
+      transition: transform 0.4s ease;
+      text-decoration: none;
+      font-family: girl;
+    }
+
+.btn-modificaciones:hover{
+   transform: rotate(120deg);
+}
+
+/*Formulario*/
+.form-container {
+  position: relative;
+  width: 90%;
+  max-width: 350px;
+  height: auto;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40%;
+  margin-bottom: 60%;
+}
+
+.form {
+  position: absolute;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+}
+
+.form.active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1;
+}
+
+input {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  width: 30%;
+  border: none;
+  border-radius: 25px;
+  background: #2656d4;
+  color: white;
+  cursor: pointer;
+  flex: 1;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #002d6b;
+}
+  /*fin_form*/
+@font-face {
+  font-family: girl;
+  font-style: normal;
+  font-weight: normal;
+  src: url(fuente/girl\ love.ttf);
+}
