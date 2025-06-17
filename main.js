@@ -18,6 +18,7 @@ function createWindow() {
   });
 
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
+  
 
   mainWindow.on('closed', () => {
     mainWindow = null;
@@ -43,3 +44,4 @@ ipcMain.on('cerrar-ventana', (event) => {
   const ventana = BrowserWindow.fromWebContents(event.sender);
   if (ventana) ventana.close();
 });
+

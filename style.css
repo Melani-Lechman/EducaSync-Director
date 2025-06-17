@@ -23,6 +23,9 @@ html, body {
   margin-left: 70px; 
   text-align: center;
   margin-top: 10%;
+  z-index: 20;
+  overflow: hidden;
+  position: relative;
 }
 
 
@@ -178,16 +181,21 @@ html, body {
 
 /*Formulario*/
 .form-container {
+  padding: 20px;
   position: relative;
-  width: 90%;
-  max-width: 350px;
+  width: 80%;
+  max-width: 400px;
   height: auto;
-  min-height: 400px;
+  min-height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 40%;
-  margin-bottom: 60%;
+  margin-left: 29%;
+  top:-3%;
+  background-image: url('imagenes/fondo_azul.png');
+  z-index: 10;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);  
 }
 
 .form {
@@ -204,7 +212,7 @@ html, body {
 .form.active {
   opacity: 1;
   transform: translateX(0);
-  z-index: 1;
+  z-index: 2;
 }
 
 input {

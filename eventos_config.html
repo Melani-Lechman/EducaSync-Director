@@ -11,15 +11,16 @@
    <div class="btn-volver">
      <a onclick="window.close()" class="icono volver" title="Volver"></a>
     </div>
-
-        <div class="form-container">
+    <div class="form-container">
             <!-- FORMULARIO  -->
-        <form id="loginForm" class="form active">
-          <label for="loginNombre">Horario</label>
-          <input type="text" id="loginNombre" placeholder="Ingrese el Horario..." required>
-          <label for="loginPassword">Aula</label>
-          <input type="text" id="loginPassword" placeholder="Ingrese el Aula..." required>
-            <button href="eventos.html" type="submit">Ingresar</button>
+        <form id="formEvento" class="form active">
+          <label for="horario">Horario</label>
+          <input type="text" id="horario" placeholder="Ingrese el Horario..." required>
+          <label for="lugar">Lugar</label>
+          <input type="text" id="lugar" placeholder="Ingrese el Lugar..." required>
+          <label for="cursos">Curso</label>
+          <input type="text" id="cursos" placeholder="Ingrese los Cursos..." required>
+            <button type="submit">Ingresar</button>
           </div>
         </form>
 
@@ -28,5 +29,7 @@
     <a href="eventos.html" target="_self" class="icono recarga" title="Configuración"></a>
     </div>
        <script src="script.js"></script>
+       <script src="script_config.js"></script>
+      <script src="eventos_config.js"></script>
 </body>
 </html>
